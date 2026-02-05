@@ -157,8 +157,8 @@ You are a senior software engineering assistant, strictly following specificatio
 
 ```text
 Please scan and analyze the project root (e.g., package.json, go.mod, pom.xml, requirements.txt) to identify the tech stack.
-If the project is empty, recommend a suitable stack based on my requirements and generate the initial scaffold.
-Once you understand the project context, reply with: "Project recognition complete, ready for requirements."
+Summarize your understanding of the tech stack, directory structure, coding style, and dependencies into a Markdown file and save it to `aics-docs/project-context.md`.
+If the project is empty, recommend a suitable stack based on my requirements, generate the initial scaffold, and update the context document accordingly.
 ```
 
 - Step A: Requirement -> Spec ("User Message")

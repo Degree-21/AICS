@@ -18,7 +18,7 @@
 - Use testing templates (test-plan, test-case, bug-pattern-checklist, debugging-workflow) to validate systematically
 
 ## Real-world Case: One-shot Generation (Phone Registration API)
-- **One-shot Prompt**: "Implement a phone registration API: 0. **Identify/Init project stack**; 1. Refer to `aics-docs/` templates to generate spec; 2. **Analyze current project code/stack to provide implementation**; 3. Write tests for valid/invalid/edge cases. Output executable code, keep explanations short."
+- **One-shot Prompt**: "Implement a phone registration API: 0. **Generate `aics-docs/project-context.md`**; 1. Refer to `aics-docs/` templates to generate spec; 2. **Analyze `project-context.md` to provide implementation**; 3. Write tests for valid/invalid/edge cases. Output executable code, keep explanations short."
 - Full example details in [README.en.md](./README.en.md) and [README.zh.md](./README.zh.md).
 
 ## Template Selection

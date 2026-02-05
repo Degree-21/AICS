@@ -55,15 +55,15 @@ aics-docs/scripts/init-docs.sh . en
   - **Give Context**: Mention `#aics-docs` (or refer to the folder) in your chat to ensure AI knows the template library.
   - **Copy System Message**:
     - "Follow the templates in `aics-docs/`, CARE components, and **this project's existing tech stack and directory conventions**; output executable code/tests with file paths; enforce acceptance criteria and non-functional gates; keep explanations under 5 sentences."
-  - **Execution Flow**: **Step 0 Project Init/Recognition** -> Spec -> Code -> Tests -> Debug.
+  - **Execution Flow**: **Step 0 Generate Project Context Doc** -> Spec -> Code -> Tests -> Debug.
 
 ## Real-world Case: One-shot Generation (Phone Registration API)
 
 **Input directly into AI dialogue:**
 > "Task: Implement a phone number input and validation API.
-> 0. **First, scan the project root to identify the tech stack (or recommend and initialize a scaffold if empty).**
+> 0. **First, scan the project root and save the identified tech stack, directory structure, and coding style to `aics-docs/project-context.md`.**
 > 1. Refer to the `rest-endpoint-spec` template in `aics-docs/` to generate a spec (including phone regex and 5+ acceptance criteria).
-> 2. Provide full implementation code (include file paths) based on the spec and by **deeply analyzing this project's existing coding style, dependencies, and architectural patterns**.
+> 2. Provide full implementation code (include file paths) based on the spec and by **deeply analyzing `project-context.md` and existing code**.
 > 3. Write test cases covering valid, incorrect length, and illegal character scenarios.
 > Requirements: Strictly follow error code definitions, output must be executable, and keep explanations under 5 sentences."
 
