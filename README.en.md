@@ -5,7 +5,7 @@ English | [中文](./README.zh.md)
 This repository focuses on spec-driven development: giving AI high-quality specifications so it can generate production-ready code and tests.
 
 ## Index
-- Templates library: [docs/templates](./docs/templates) (beginner/intermediate/advanced/testing)
+- Templates library: [docs/templates/en](./docs/templates/en) (beginner/intermediate/advanced/testing)
 - CARE framework: [docs/care-framework.en.md](./docs/care-framework.en.md)
 - References: [docs/sources.en.md](./docs/sources.en.md)
 

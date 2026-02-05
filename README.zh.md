@@ -5,7 +5,7 @@
 本模板聚焦于以“规范驱动开发”为核心，让 AI 基于高质量规格生成可用于生产的代码与测试。
 
 ## 目录
-- 模板库：[docs/templates](./docs/templates)（入门/中级/高级/测试）
+- 模板库：[docs/templates/zh](./docs/templates/zh)（入门/中级/高级/测试）
 - CARE 框架：[docs/care-framework.zh.md](./docs/care-framework.zh.md)
 - 参考来源：[docs/sources.zh.md](./docs/sources.zh.md)
 
