@@ -1,13 +1,13 @@
 # 规格驱动 AI 开发文档模板（中文）
 
-[English](file:///Users/macbookpro/21/python/AICS/README.en.md) | 中文
+[English](./README.en.md) | 中文
 
 本模板聚焦于以“规范驱动开发”为核心，让 AI 基于高质量规格生成可用于生产的代码与测试。
 
 ## 目录
-- 模板库：docs/templates（入门/中级/高级/测试）
-- CARE 框架：docs/care-framework.zh.md
-- 参考来源：docs/sources.zh.md
+- 模板库：[docs/templates](./docs/templates)（入门/中级/高级/测试）
+- CARE 框架：[docs/care-framework.zh.md](./docs/care-framework.zh.md)
+- 参考来源：[docs/sources.zh.md](./docs/sources.zh.md)
 
 ## 快速开始
 - 选择任务复杂度对应的模板（入门/中级/高级）
@@ -31,4 +31,4 @@
 - 非功能显式：安全、性能、可靠性、可维护性必须明确
 
 ## 参考来源
-- 详见 docs/sources.zh.md | [English Sources](file:///Users/macbookpro/21/python/AICS/docs/sources.en.md)
+- 详见 [docs/sources.zh.md](./docs/sources.zh.md) | [English Sources](./docs/sources.en.md)

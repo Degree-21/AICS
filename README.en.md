@@ -1,13 +1,13 @@
 # Spec-Driven AI Development Templates (English)
 
-English | [中文](file:///Users/macbookpro/21/python/AICS/README.zh.md)
+English | [中文](./README.zh.md)
 
 This repository focuses on spec-driven development: giving AI high-quality specifications so it can generate production-ready code and tests.
 
 ## Index
-- Templates library: docs/templates (beginner/intermediate/advanced/testing)
-- CARE framework: docs/care-framework.en.md
-- References: docs/sources.en.md
+- Templates library: [docs/templates](./docs/templates) (beginner/intermediate/advanced/testing)
+- CARE framework: [docs/care-framework.en.md](./docs/care-framework.en.md)
+- References: [docs/sources.en.md](./docs/sources.en.md)
 
 ## Quick Start
 - Pick a template based on task complexity (beginner/intermediate/advanced)
@@ -31,4 +31,4 @@ This repository focuses on spec-driven development: giving AI high-quality speci
 - Non-functional requirements must be explicit (security, performance, reliability, maintainability)
 
 ## References
-- See docs/sources.en.md | [中文来源](file:///Users/macbookpro/21/python/AICS/docs/sources.zh.md)
+- See [docs/sources.en.md](./docs/sources.en.md) | [中文来源](./docs/sources.zh.md)

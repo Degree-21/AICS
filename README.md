@@ -1,13 +1,13 @@
 # Spec-Driven AI Development Templates
 
-- English: [README.en.md](file:///Users/macbookpro/21/python/AICS/README.en.md)
-- 中文: [README.zh.md](file:///Users/macbookpro/21/python/AICS/README.zh.md)
+- English: [README.en.md](./README.en.md)
+- 中文: [README.zh.md](./README.zh.md)
 - Source: https://www.softwareseni.com/
 
 ## Index
-- Templates library: docs/templates (beginner/intermediate/advanced/testing)
-- CARE framework: [docs/care-framework.en.md](file:///Users/macbookpro/21/python/AICS/docs/care-framework.en.md)
-- References: [docs/sources.en.md](file:///Users/macbookpro/21/python/AICS/docs/sources.en.md)
+- Templates library: [docs/templates](./docs/templates) (beginner/intermediate/advanced/testing)
+- CARE framework: [docs/care-framework.en.md](./docs/care-framework.en.md)
+- References: [docs/sources.en.md](./docs/sources.en.md)
 
 ## Quick Start
 - Pick a template by task complexity (beginner/intermediate/advanced/testing) under docs/templates
