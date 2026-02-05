@@ -21,37 +21,27 @@ This repository focuses on spec-driven development: giving AI high-quality speci
 - To initialize docs into another project: run `scripts/init-docs.sh <target_dir> en [--force]`
 
 ## Install & Integrate
-- Copy into a project
+
+Option 1: Clone as a Standalone Directory (Recommended)
+Run this in your project root:
 
 ```bash
-# From this repo root, initialize docs into target project
-scripts/init-docs.sh ../your-project en
-# Overwrite existing files if needed
-scripts/init-docs.sh ../your-project en --force
-```
-
-- Install into aics-docs/ directory (recommended)
-
-```bash
-# From your project root
 git clone https://github.com/Degree-21/AICS.git aics-docs
-chmod +x aics-docs/scripts/init-docs.sh
-aics-docs/scripts/init-docs.sh ./aics-docs en
-# or Chinese default
-aics-docs/scripts/init-docs.sh ./aics-docs zh
+# The aics-docs/ directory is now ready to use
 ```
 
-- Use as a submodule
+Option 2: Add as a Git Submodule
+If your project is a Git repository and you want to keep docs updated:
 
 ```bash
-# From your target project root
-git submodule add <this-repo-url> aics-docs
-# Initialize docs into project root (keep English as default)
-aics-docs/scripts/init-docs.sh . en
+git submodule add https://github.com/Degree-21/AICS.git aics-docs
+# The aics-docs/ directory is added as a submodule
 ```
+
+See [INSTALL.en.md](./docs/INSTALL.en.md) for more options.
 
 ## Install & Use (no jumping needed)
-- After installation, follow these steps to talk to AI:
+- After cloning, follow these steps to talk to AI:
   - **Give Context**: Mention `#aics-docs` (or refer to the folder) in your chat to ensure AI knows the template library.
   - **Copy System Message**:
     - "Follow the templates in `aics-docs/`, CARE components, and **this project's existing tech stack and directory conventions**; output executable code/tests with file paths; enforce acceptance criteria and non-functional gates; keep explanations under 5 sentences."

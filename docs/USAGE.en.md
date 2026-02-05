@@ -8,18 +8,31 @@ Prerequisites
 
 Initialize
 - Copy docs and READMEs into your project
-- English default: scripts/init-docs.sh <target_dir> en [--force]
-- Chinese default: scripts/init-docs.sh <target_dir> zh [--force]
- - Install into your project's aics-docs/ via git clone
+ - Option 1: Clone into project root (Recommended)
 
 ```bash
-# From your project root: include as a vendor folder and install into aics-docs/
+# From your project root
 git clone https://github.com/Degree-21/AICS.git aics-docs
-chmod +x aics-docs/scripts/init-docs.sh
-# Copy docs into your project's aics-docs/ (choose English or Chinese default)
-aics-docs/scripts/init-docs.sh ./aics-docs en
-# or
-aics-docs/scripts/init-docs.sh ./aics-docs zh
+# The aics-docs/ directory is now ready to use
+```
+
+ - Option 2: Add as a submodule
+
+```bash
+# From your target project root
+git submodule add https://github.com/Degree-21/AICS.git aics-docs
+```
+
+ - Option 3: Manual extraction (Advanced)
+
+```bash
+# Clone to temp dir
+git clone https://github.com/Degree-21/AICS.git temp-aics
+chmod +x temp-aics/scripts/init-docs.sh
+# Copy docs into your project's aics-docs/
+temp-aics/scripts/init-docs.sh ./aics-docs en
+# Cleanup
+rm -rf temp-aics
 ```
 
 Quick Dialogue Start (right after clone)

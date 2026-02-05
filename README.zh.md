@@ -21,37 +21,27 @@
 - 初始化到其他项目：运行 `scripts/init-docs.sh <目标目录> zh [--force]`
 
 ## 安装与集成
-- 作为独立拷贝
+
+方式一：作为独立目录克隆（推荐）
+在你的项目根目录下执行：
 
 ```bash
-# 在本仓库根目录执行，将文档初始化到目标项目
-scripts/init-docs.sh ../your-project zh
-# 如需覆盖目标项目已有同名文件
-scripts/init-docs.sh ../your-project zh --force
-```
-
-- 安装到 aics-docs 目录（推荐）
-
-```bash
-# 在你的项目根目录执行
 git clone https://github.com/Degree-21/AICS.git aics-docs
-chmod +x aics-docs/scripts/init-docs.sh
-aics-docs/scripts/init-docs.sh ./aics-docs zh
-# 或英文默认
-aics-docs/scripts/init-docs.sh ./aics-docs en
+# 此时 aics-docs/ 目录已准备好，可直接使用
 ```
 
-- 作为子模块引入
+方式二：作为 Git 子模块（Submodule）
+如果你的项目也是一个 Git 仓库，且希望保持文档库的更新同步：
 
 ```bash
-# 在目标项目根目录执行
-git submodule add <this-repo-url> aics-docs
-# 初始化文档到项目根目录（保留中文为默认）
-aics-docs/scripts/init-docs.sh . zh
+git submodule add https://github.com/Degree-21/AICS.git aics-docs
+# 此时 aics-docs/ 目录已作为子模块加入
 ```
+
+更多安装方式详见 [安装文档](./docs/INSTALL.zh.md)。
 
 ## 安装与使用（无需跳转）
-- 克隆并安装完成后，直接按以下步骤与 AI 对话：
+- 克隆完成后，直接按以下步骤与 AI 对话：
   - **赋予上下文**：在对话开始时，使用 `#aics-docs`（或通过工具提及文件夹）让 AI 了解规格模板库。
   - **复制系统消息**：
     - “请严格遵循 `aics-docs/` 中的规格模板、CARE 六要素与**本项目现有技术栈及目录约定**；输出必须可执行（包含文件路径与完整内容）；验收与非功能质量门必须可测试；解释不超过 5 句。”

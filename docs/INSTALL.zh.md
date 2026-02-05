@@ -3,47 +3,41 @@
 仓库地址
 - https://github.com/Degree-21/AICS
 
-环境要求
-- macOS/Linux 终端可执行 shell
-- 可执行脚本：scripts/init-docs.sh
-
-方式一：直接克隆并初始化到项目根目录
+方式一：作为独立目录克隆（推荐）
+在你的项目根目录下执行：
 
 ```bash
 git clone https://github.com/Degree-21/AICS.git aics-docs
-cd aics-docs && chmod +x scripts/init-docs.sh
-# 英文默认
-scripts/init-docs.sh ../your-project en
-# 中文默认
-scripts/init-docs.sh ../your-project zh
-# 覆盖已有同名文件
-scripts/init-docs.sh ../your-project en --force
+# 此时 aics-docs/ 目录已准备好，可直接使用
 ```
 
-方式二：克隆并安装到项目 aics-docs 目录
+方式二：作为 Git 子模块（Submodule）
+如果你的项目也是一个 Git 仓库，且希望保持文档库的更新同步：
 
 ```bash
-cd your-project
-git clone https://github.com/Degree-21/AICS.git aics-docs
-chmod +x aics-docs/scripts/init-docs.sh
-# 安装到 aics-docs（英文/中文默认二选一）
-aics-docs/scripts/init-docs.sh ./aics-docs en
-aics-docs/scripts/init-docs.sh ./aics-docs zh
-```
-
-方式三：作为子模块引入
-
-```bash
-cd your-project
 git submodule add https://github.com/Degree-21/AICS.git aics-docs
-chmod +x aics-docs/scripts/init-docs.sh
-aics-docs/scripts/init-docs.sh . en
+# 此时 aics-docs/ 目录已作为子模块加入
+```
+
+后续步骤
+- 阅读 `aics-docs/README.zh.md` 开始使用
+- 按照 Step 0 生成 `aics-docs/project-context.md`
+
+高级用法（手动提取）
+如果你希望将文档库的内容“提取”到项目其他位置（脱离 Git 关联）：
+
+```bash
+# 克隆到临时目录
+git clone https://github.com/Degree-21/AICS.git temp-aics
+chmod +x temp-aics/scripts/init-docs.sh
+
+# 将文档复制到你的 docs/ 目录（不包含 .git 信息）
+temp-aics/scripts/init-docs.sh ./docs zh
+
+# 清理临时目录
+rm -rf temp-aics
 ```
 
 卸载/清理
-- 删除复制到项目的 docs/ 子目录与 README.* 文件
-- 若使用子模块：`git submodule deinit -f aics-docs && git rm -f aics-docs`
-
-后续
-- 使用指南：docs/USAGE.zh.md
-- 语言切换：README.zh.md 与 README.en.md 顶部互相跳转
+- 方式一：`rm -rf aics-docs`
+- 方式二：`git submodule deinit -f aics-docs && git rm -f aics-docs`

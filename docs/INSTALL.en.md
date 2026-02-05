@@ -3,47 +3,41 @@
 Repository
 - https://github.com/Degree-21/AICS
 
-Requirements
-- macOS/Linux shell
-- Executable script: scripts/init-docs.sh
-
-Option 1: Clone and initialize into project root
+Option 1: Clone as a Standalone Directory (Recommended)
+Run this in your project root:
 
 ```bash
 git clone https://github.com/Degree-21/AICS.git aics-docs
-cd aics-docs && chmod +x scripts/init-docs.sh
-# English default
-scripts/init-docs.sh ../your-project en
-# Chinese default
-scripts/init-docs.sh ../your-project zh
-# Overwrite existing files
-scripts/init-docs.sh ../your-project en --force
+# The aics-docs/ directory is now ready to use
 ```
 
-Option 2: Clone and install into your project's aics-docs directory
+Option 2: Add as a Git Submodule
+If your project is a Git repository and you want to keep docs updated:
 
 ```bash
-cd your-project
-git clone https://github.com/Degree-21/AICS.git aics-docs
-chmod +x aics-docs/scripts/init-docs.sh
-# Install into aics-docs (choose English or Chinese default)
-aics-docs/scripts/init-docs.sh ./aics-docs en
-aics-docs/scripts/init-docs.sh ./aics-docs zh
-```
-
-Option 3: Add as a submodule
-
-```bash
-cd your-project
 git submodule add https://github.com/Degree-21/AICS.git aics-docs
-chmod +x aics-docs/scripts/init-docs.sh
-aics-docs/scripts/init-docs.sh . en
+# The aics-docs/ directory is added as a submodule
+```
+
+Next Steps
+- Read `aics-docs/README.en.md` to start
+- Follow "Step 0" to generate `aics-docs/project-context.md`
+
+Advanced Usage (Manual Extraction)
+If you want to extract docs into another location (detached from Git):
+
+```bash
+# Clone to temp dir
+git clone https://github.com/Degree-21/AICS.git temp-aics
+chmod +x temp-aics/scripts/init-docs.sh
+
+# Copy docs to your docs/ directory (without .git metadata)
+temp-aics/scripts/init-docs.sh ./docs en
+
+# Cleanup
+rm -rf temp-aics
 ```
 
 Uninstall/Cleanup
-- Remove copied docs/ subdirectories and README.* files from your project
-- If using submodule: `git submodule deinit -f aics-docs && git rm -f aics-docs`
-
-Next Steps
-- Usage guide: docs/USAGE.en.md
-- Language switching: README.en.md and README.zh.md link each other at the top
+- Option 1: `rm -rf aics-docs`
+- Option 2: `git submodule deinit -f aics-docs && git rm -f aics-docs`

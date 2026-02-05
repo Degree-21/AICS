@@ -39,49 +39,21 @@
 
 ## Usage (Inline)
 - Install & Integrate
-  - Clone
+  - Option 1: Clone as a Standalone Directory (Recommended)
 
     ```bash
-    git clone https://github.com/Degree-21/AICS.git
-    cd AICS && chmod +x scripts/init-docs.sh
-    ```
-  - Initialize into your project
-
-    ```bash
-    scripts/init-docs.sh ../your-project en
-    # Chinese default
-    scripts/init-docs.sh ../your-project zh
-    # Overwrite existing files
-    scripts/init-docs.sh ../your-project en --force
-    ```
-  - Submodule
-
-    ```bash
-    cd your-project
-    git submodule add https://github.com/Degree-21/AICS.git aics-docs
-    chmod +x aics-docs/scripts/init-docs.sh
-    aics-docs/scripts/init-docs.sh . en
-    ```
-  - Install into aics-docs/ directory
-
-    ```bash
-    # From your project root
     git clone https://github.com/Degree-21/AICS.git aics-docs
-    chmod +x aics-docs/scripts/init-docs.sh
-    aics-docs/scripts/init-docs.sh ./aics-docs en
-    # or Chinese default
-    aics-docs/scripts/init-docs.sh ./aics-docs zh
+    ```
+  - Option 2: Add as a Git Submodule
+
+    ```bash
+    git submodule add https://github.com/Degree-21/AICS.git aics-docs
     ```
 
 - Requirement → Spec → Code → Tests
-  - Turn requirement into executable spec using a template and the CARE components
-  - Generate implementation strictly aligned to the spec
-  - Generate tests covering positive/negative/edge, contract/schema and logs
-  - Debug systematically; refine the spec when deviations are found
-  - Quick Dialogue Start (no jumping needed):
-    - Copy this System Message into your AI tool:
-      - "Follow CARE components and project conventions; output executable code/tests with file paths; enforce acceptance criteria and non-functional gates; keep explanations under 5 sentences."
-    - Step A: Paste your requirement to generate a spec using the right template
-    - Step B: Generate implementation aligned to the spec (file paths + full contents)
-    - Step C: Generate tests covering positive/negative/edge, contract/schema and logs
-    - Step D: If failures occur, follow the debugging workflow and update the spec
+  - **Step 0**: Generate `aics-docs/project-context.md` by scanning project root
+  - **Step 1**: Turn requirement into executable spec using a template and the CARE components
+  - **Step 2**: Generate implementation strictly aligned to the spec and `project-context.md`
+  - **Step 3**: Generate tests covering positive/negative/edge, contract/schema and logs
+  - **Step 4**: Debug systematically; refine the spec when deviations are found
+  - Full guide: [USAGE.en.md](./docs/USAGE.en.md) · [USAGE.zh.md](./docs/USAGE.zh.md)

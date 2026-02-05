@@ -8,18 +8,31 @@
 
 初始化
 - 将 docs 与 README 拷贝到目标项目
-- 英文默认：scripts/init-docs.sh <目标目录> en [--force]
-- 中文默认：scripts/init-docs.sh <目标目录> zh [--force]
- - 安装到项目 aics-docs 目录（git clone 形式）
+ - 方式一：克隆到项目根目录（推荐）
 
 ```bash
-# 在你的项目根目录执行：以 vendor 子目录引入并安装到 aics-docs/
+# 在你的项目根目录执行
 git clone https://github.com/Degree-21/AICS.git aics-docs
-chmod +x aics-docs/scripts/init-docs.sh
-# 将文档复制到项目 aics-docs 目录（英文/中文默认二选一）
-aics-docs/scripts/init-docs.sh ./aics-docs en
-# 或
-aics-docs/scripts/init-docs.sh ./aics-docs zh
+# 此时 aics-docs/ 目录已准备好，可直接使用
+```
+
+ - 方式二：作为子模块引入
+
+```bash
+# 在目标项目根目录执行
+git submodule add https://github.com/Degree-21/AICS.git aics-docs
+```
+
+ - 方式三：手动提取（高级）
+
+```bash
+# 克隆到临时目录
+git clone https://github.com/Degree-21/AICS.git temp-aics
+chmod +x temp-aics/scripts/init-docs.sh
+# 将文档复制到项目 aics-docs 目录
+temp-aics/scripts/init-docs.sh ./aics-docs zh
+# 清理
+rm -rf temp-aics
 ```
 
 快速对话上手（克隆后立刻用）
