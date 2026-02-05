@@ -38,6 +38,9 @@ git submodule add https://github.com/Degree-21/AICS.git aics-docs
 # 此时 aics-docs/ 目录已作为子模块加入
 ```
 
+方式三：作为 Skill 导入（高级）
+如果你使用的 AI 编辑器支持“Skills”功能，可以将本项目的核心能力一键导入。详见 [docs/skills/aics-skill.zh.md](./docs/skills/aics-skill.zh.md)。
+
 更多安装方式详见 [安装文档](./docs/INSTALL.zh.md)。
 
 ## 安装与使用（无需跳转）

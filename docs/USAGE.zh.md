@@ -70,7 +70,20 @@ CI 建议
 语言导航
 - 英文与中文页面顶部均提供互相跳转链接
 
-提示词配方（参考示例）
+## 进阶：作为 Skill 导入（推荐）
+如果你使用的 AI 编辑器（如 Trae, Cursor, Windsurf）支持“Skills”或“Rules”功能，可以将本项目的核心能力一键导入。
+
+### 步骤
+1.  在你的 AI 编辑器中创建一个新 Skill，命名为 **AICS-Architect**。
+2.  将 `aics-docs/docs/skills/aics-skill.zh.md` 中的 **系统提示词** 内容复制到 Skill 的 Prompt 区域。
+3.  在 Skill 的 **Context/Knowledge** 设置中，将 `aics-docs/` 文件夹添加为知识源。
+
+### 优势
+-   无需每次手动复制长篇提示词。
+-   只需输入“@AICS-Architect 帮我分析项目”即可启动 Step 0。
+-   AI 会自动检索 `docs/templates` 下的模板，无需手动粘贴。
+
+## 提示词配方（参考示例）
 > 注意：以下仅为示例。AI 在生成代码前应通过分析本项目根目录文件（如 package.json, requirements.txt, go.mod 等）来自动识别技术栈。
 
 - 通用结构

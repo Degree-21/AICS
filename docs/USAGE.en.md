@@ -70,7 +70,20 @@ CI Suggestions
 Language Navigation
 - English and Chinese pages include mutual links at the top for quick switching
 
-Prompt Recipes (Reference Examples)
+## Advanced: Import as a Skill (Recommended)
+If your AI editor (Trae, Cursor, Windsurf, etc.) supports "Skills" or "Rules", you can import AICS as a persistent assistant.
+
+### Steps
+1.  Create a new Skill named **AICS-Architect** in your AI editor.
+2.  Copy the **System Prompt** content from `aics-docs/docs/skills/aics-skill.en.md` into the Skill's prompt area.
+3.  Add the `aics-docs/` folder as a **Context/Knowledge** source for this Skill.
+
+### Benefits
+-   No need to copy-paste prompts repeatedly.
+-   Start Step 0 by simply typing "@AICS-Architect analyze this project".
+-   AI automatically retrieves templates from `docs/templates`, so you don't have to paste them manually.
+
+## Prompt Recipes (Reference Examples)
 > Note: The following are examples only. Before generating code, AI should analyze root files (e.g., package.json, requirements.txt, go.mod) to identify the project stack automatically.
 
 - General structure

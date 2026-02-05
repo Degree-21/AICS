@@ -38,6 +38,9 @@ git submodule add https://github.com/Degree-21/AICS.git aics-docs
 # The aics-docs/ directory is added as a submodule
 ```
 
+Option 3: Import as a Skill (Advanced)
+If your AI editor supports "Skills", you can import AICS as a persistent assistant. See [docs/skills/aics-skill.en.md](./docs/skills/aics-skill.en.md).
+
 See [INSTALL.en.md](./docs/INSTALL.en.md) for more options.
 
 ## Install & Use (no jumping needed)
