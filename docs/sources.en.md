@@ -1,5 +1,7 @@
 # Document Sources and References
 
+English | [中文](file:///Users/macbookpro/21/python/AICS/docs/sources.zh.md)
+
 ## Primary Source
 - SoftwareSeni  
   https://www.softwareseni.com/

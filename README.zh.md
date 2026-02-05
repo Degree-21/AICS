@@ -1,5 +1,7 @@
 # 规格驱动 AI 开发文档模板（中文）
 
+[English](file:///Users/macbookpro/21/python/AICS/README.en.md) | 中文
+
 本模板聚焦于以“规范驱动开发”为核心，让 AI 基于高质量规格生成可用于生产的代码与测试。
 
 ## 目录
@@ -29,4 +31,4 @@
 - 非功能显式：安全、性能、可靠性、可维护性必须明确
 
 ## 参考来源
-- 详见 docs/sources.zh.md
+- 详见 docs/sources.zh.md | [English Sources](file:///Users/macbookpro/21/python/AICS/docs/sources.en.md)

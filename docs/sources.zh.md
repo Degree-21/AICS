@@ -1,5 +1,7 @@
 # 文档来源与参考
 
+[English](file:///Users/macbookpro/21/python/AICS/docs/sources.en.md) | 中文
+
 ## 主来源
 - SoftwareSeni  
   https://www.softwareseni.com/

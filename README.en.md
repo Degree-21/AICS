@@ -1,5 +1,7 @@
 # Spec-Driven AI Development Templates (English)
 
+English | [中文](file:///Users/macbookpro/21/python/AICS/README.zh.md)
+
 This repository focuses on spec-driven development: giving AI high-quality specifications so it can generate production-ready code and tests.
 
 ## Index
@@ -29,4 +31,4 @@ This repository focuses on spec-driven development: giving AI high-quality speci
 - Non-functional requirements must be explicit (security, performance, reliability, maintainability)
 
 ## References
-- See docs/sources.en.md
+- See docs/sources.en.md | [中文来源](file:///Users/macbookpro/21/python/AICS/docs/sources.zh.md)
