@@ -1,9 +1,12 @@
 # Document Sources and References
 
-## Primary Sources
+## Primary Source
+- SoftwareSeni  
+  https://www.softwareseni.com/
+
+## Key Articles
 - Specification Templates for AI Code Generation: From First Draft to Production  
   https://www.softwareseni.com/specification-templates-for-ai-code-generation-from-first-draft-to-production/
-
 - Testing and Debugging AI-Generated Code - Systematic Strategies That Work  
   https://www.softwareseni.com/testing-and-debugging-ai-generated-code-systematic-strategies-that-work/
 

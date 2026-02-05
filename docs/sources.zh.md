@@ -1,9 +1,12 @@
 # 文档来源与参考
 
-## 主要来源
+## 主来源
+- SoftwareSeni  
+  https://www.softwareseni.com/
+
+## 关键文章
 - Specification Templates for AI Code Generation: From First Draft to Production  
   https://www.softwareseni.com/specification-templates-for-ai-code-generation-from-first-draft-to-production/
-
 - Testing and Debugging AI-Generated Code - Systematic Strategies That Work  
   https://www.softwareseni.com/testing-and-debugging-ai-generated-code-systematic-strategies-that-work/
 
