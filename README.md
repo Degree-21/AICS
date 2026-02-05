@@ -1,6 +1,17 @@
 # 规格驱动 AI 开发文档模板
 
-本模板将“规范驱动开发”方法落地到可执行的文档骨架，帮助团队以规格为唯一事实来源，借助 AI 理解规格并生成一致、可维护、可验证的生产级代码。
+- English: [README.en.md](file:///Users/macbookpro/21/python/AICS/README.en.md)
+- 中文: [README.zh.md](file:///Users/macbookpro/21/python/AICS/README.zh.md)
+- 参考来源: [sources.en.md](file:///Users/macbookpro/21/python/AICS/docs/sources.en.md) · [sources.zh.md](file:///Users/macbookpro/21/python/AICS/docs/sources.zh.md)
+
+## 这是什么
+- 一套可复制的规格与测试模板库，帮助你用高质量规格驱动 AI 生成生产级代码与测试。
+
+## 如何使用
+- 选择合适模板（入门/中级/高级/测试）于 docs/templates。
+- 按 CARE 六要素填写：上下文、功能、边界/约束、示例、验收、非功能。
+- 将规格交给 AI 工具生成实现与测试；发现偏差先回写规格再迭代。
+- 使用测试模板（计划/用例/错误模式/调试工作流）系统化验证与修正。
 
 ## 目标
 - 以规格为源：OpenAPI、JSON Schema、结构化需求文档成为唯一事实来源
@@ -30,6 +41,15 @@
       - [code-refactoring-spec.md (ZH)](file:///Users/macbookpro/21/python/AICS/docs/templates/zh/code-refactoring-spec.md)
       - [code-migration-spec.md (EN)](file:///Users/macbookpro/21/python/AICS/docs/templates/en/code-migration-spec.md)
       - [code-migration-spec.md (ZH)](file:///Users/macbookpro/21/python/AICS/docs/templates/zh/code-migration-spec.md)
+    - 测试：计划/用例/错误模式/调试工作流
+      - [test-plan.md (EN)](file:///Users/macbookpro/21/python/AICS/docs/templates/en/testing/test-plan.md)
+      - [test-plan.md (ZH)](file:///Users/macbookpro/21/python/AICS/docs/templates/zh/testing/test-plan.md)
+      - [test-case.md (EN)](file:///Users/macbookpro/21/python/AICS/docs/templates/en/testing/test-case.md)
+      - [test-case.md (ZH)](file:///Users/macbookpro/21/python/AICS/docs/templates/zh/testing/test-case.md)
+      - [bug-pattern-checklist.md (EN)](file:///Users/macbookpro/21/python/AICS/docs/templates/en/testing/bug-pattern-checklist.md)
+      - [bug-pattern-checklist.md (ZH)](file:///Users/macbookpro/21/python/AICS/docs/templates/zh/testing/bug-pattern-checklist.md)
+      - [debugging-workflow.md (EN)](file:///Users/macbookpro/21/python/AICS/docs/templates/en/testing/debugging-workflow.md)
+      - [debugging-workflow.md (ZH)](file:///Users/macbookpro/21/python/AICS/docs/templates/zh/testing/debugging-workflow.md)
   - CARE 框架：docs/care-framework.en.md、docs/care-framework.zh.md
 
 ## 快速开始

@@ -44,3 +44,9 @@ Performance Requirements
 Non-Functional Requirements
 - Security, reliability, observability considerations
 
+<<<<<<< HEAD
+=======
+References
+- Specification Templates for AI Code Generation: From First Draft to Production  
+  https://www.softwareseni.com/specification-templates-for-ai-code-generation-from-first-draft-to-production/
+>>>>>>> b3f1e63 (docs: 新增中英文规格模板库与CARE框架文档)

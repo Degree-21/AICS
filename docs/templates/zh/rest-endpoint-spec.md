@@ -44,3 +44,9 @@
 非功能需求
 - 安全、可靠性、可观察性
 
+<<<<<<< HEAD
+=======
+参考来源
+- Specification Templates for AI Code Generation: From First Draft to Production  
+  https://www.softwareseni.com/specification-templates-for-ai-code-generation-from-first-draft-to-production/
+>>>>>>> b3f1e63 (docs: 新增中英文规格模板库与CARE框架文档)
