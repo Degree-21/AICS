@@ -4,14 +4,10 @@
 
 本模板聚焦于以“规范驱动开发”为核心，让 AI 基于高质量规格生成可用于生产的代码与测试。
 
-## 项目目的
-- 提供可复用的双语规格与测试模板，帮助团队将需求转化为可执行规格，借助 AI 生成实现与测试，并在明确的验收与非功能质量门下安全迭代。
-
 ## 目录
 - 模板库：[docs/templates/zh](./docs/templates/zh)（入门/中级/高级/测试）
 - CARE 框架：[docs/care-framework.zh.md](./docs/care-framework.zh.md)
 - 使用指南：[docs/USAGE.zh.md](./docs/USAGE.zh.md)
-- 安装文档：[docs/INSTALL.zh.md](./docs/INSTALL.zh.md)
 - 参考来源：[docs/sources.zh.md](./docs/sources.zh.md)
 
 ## 快速开始

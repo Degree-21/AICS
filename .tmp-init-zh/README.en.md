@@ -4,15 +4,11 @@ English | [中文](./README.zh.md)
 
 This repository focuses on spec-driven development: giving AI high-quality specifications so it can generate production-ready code and tests.
 
-## Purpose
-- Provide reusable bilingual templates and workflows so teams can turn requirements into executable specs, generate implementation and tests with AI, and iterate safely with explicit acceptance and non-functional gates.
-
 ## Index
 - Templates library: [docs/templates/en](./docs/templates/en) (beginner/intermediate/advanced/testing)
 - CARE framework: [docs/care-framework.en.md](./docs/care-framework.en.md)
 - References: [docs/sources.en.md](./docs/sources.en.md)
 - Usage: [docs/USAGE.en.md](./docs/USAGE.en.md)
- - Install: [docs/INSTALL.en.md](./docs/INSTALL.en.md)
 
 ## Quick Start
 - Pick a template based on task complexity (beginner/intermediate/advanced)
