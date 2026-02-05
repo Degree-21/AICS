@@ -30,14 +30,41 @@ scripts/init-docs.sh ../your-project zh
 scripts/init-docs.sh ../your-project zh --force
 ```
 
+- 安装到 aics-docs 目录（推荐）
+
+```bash
+# 在你的项目根目录执行
+git clone https://github.com/Degree-21/AICS.git aics-docs
+chmod +x aics-docs/scripts/init-docs.sh
+aics-docs/scripts/init-docs.sh ./aics-docs zh
+# 或英文默认
+aics-docs/scripts/init-docs.sh ./aics-docs en
+```
+
 - 作为子模块引入
 
 ```bash
 # 在目标项目根目录执行
-git submodule add <this-repo-url> vendor/aics-docs
+git submodule add <this-repo-url> aics-docs
 # 初始化文档到项目根目录（保留中文为默认）
-vendor/aics-docs/scripts/init-docs.sh . zh
+aics-docs/scripts/init-docs.sh . zh
 ```
+
+## 安装与使用（无需跳转）
+- 克隆并安装完成后，直接按以下步骤与 AI 对话：
+  - **赋予上下文**：在对话开始时，使用 `#aics-docs`（或通过工具提及文件夹）让 AI 了解规格模板库。
+  - **复制系统消息**：
+    - “请严格遵循 `aics-docs/` 中的规格模板、CARE 六要素与**本项目现有技术栈及目录约定**；输出必须可执行（包含文件路径与完整内容）；验收与非功能质量门必须可测试；解释不超过 5 句。”
+  - **执行流程**：从需求生成规格 -> **分析项目现有代码生成实现** -> 生成配套测试 -> 调试与回写规格。
+
+## 实战案例：一键生成（手机号注册接口）
+
+**在 AI 对话框直接输入：**
+> “任务：实现一个手机号填写与验证接口。
+> 1. 先参考 `aics-docs/` 中的 `rest-endpoint-spec` 模板生成规格文档（含手机号正则校验、5条以上验收标准）。
+> 2. 接着根据规格并**深度分析本项目现有的代码风格、依赖与架构约定**，提供完整实现代码（包含文件路径）。
+> 3. 最后编写配套测试用例，覆盖正向、位数错误、非法字符等场景。
+> 要求：严格遵守错误码定义，输出必须可执行，解释不超过 5 句。”
 
 ## 模板选择
 - 函数：function-spec（自然语言）

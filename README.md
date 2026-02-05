@@ -17,6 +17,10 @@
 - Generate code and tests with AI; when deviations appear, refine the specification first, then iterate implementation
 - Use testing templates (test-plan, test-case, bug-pattern-checklist, debugging-workflow) to validate systematically
 
+## Real-world Case: One-shot Generation (Phone Registration API)
+- **One-shot Prompt**: "Implement a phone registration API: 1. Refer to `aics-docs/` templates to generate spec; 2. **Analyze current project code/stack to provide implementation**; 3. Write tests for valid/invalid/edge cases. Output executable code, keep explanations short."
+- Full example details in [README.en.md](./README.en.md) and [README.zh.md](./README.zh.md).
+
 ## Template Selection
 - Function: function-spec (natural language)
 - Backend API: rest-endpoint-spec (mix OpenAPI/Schema as needed)
@@ -54,19 +58,19 @@
 
     ```bash
     cd your-project
-    git submodule add https://github.com/Degree-21/AICS.git vendor/aics-docs
-    chmod +x vendor/aics-docs/scripts/init-docs.sh
-    vendor/aics-docs/scripts/init-docs.sh . en
+    git submodule add https://github.com/Degree-21/AICS.git aics-docs
+    chmod +x aics-docs/scripts/init-docs.sh
+    aics-docs/scripts/init-docs.sh . en
     ```
   - Install into aics-docs/ directory
 
     ```bash
     # From your project root
-    git clone https://github.com/Degree-21/AICS.git vendor/aics-docs
-    chmod +x vendor/aics-docs/scripts/init-docs.sh
-    vendor/aics-docs/scripts/init-docs.sh ./aics-docs en
+    git clone https://github.com/Degree-21/AICS.git aics-docs
+    chmod +x aics-docs/scripts/init-docs.sh
+    aics-docs/scripts/init-docs.sh ./aics-docs en
     # or Chinese default
-    vendor/aics-docs/scripts/init-docs.sh ./aics-docs zh
+    aics-docs/scripts/init-docs.sh ./aics-docs zh
     ```
 
 - Requirement → Spec → Code → Tests
@@ -74,4 +78,10 @@
   - Generate implementation strictly aligned to the spec
   - Generate tests covering positive/negative/edge, contract/schema and logs
   - Debug systematically; refine the spec when deviations are found
-  - Full guide: [USAGE.en.md](./docs/USAGE.en.md) · [USAGE.zh.md](./docs/USAGE.zh.md)
+  - Quick Dialogue Start (no jumping needed):
+    - Copy this System Message into your AI tool:
+      - "Follow CARE components and project conventions; output executable code/tests with file paths; enforce acceptance criteria and non-functional gates; keep explanations under 5 sentences."
+    - Step A: Paste your requirement to generate a spec using the right template
+    - Step B: Generate implementation aligned to the spec (file paths + full contents)
+    - Step C: Generate tests covering positive/negative/edge, contract/schema and logs
+    - Step D: If failures occur, follow the debugging workflow and update the spec

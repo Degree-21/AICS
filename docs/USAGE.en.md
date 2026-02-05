@@ -14,12 +14,12 @@ Initialize
 
 ```bash
 # From your project root: include as a vendor folder and install into aics-docs/
-git clone https://github.com/Degree-21/AICS.git vendor/aics-docs
-chmod +x vendor/aics-docs/scripts/init-docs.sh
+git clone https://github.com/Degree-21/AICS.git aics-docs
+chmod +x aics-docs/scripts/init-docs.sh
 # Copy docs into your project's aics-docs/ (choose English or Chinese default)
-vendor/aics-docs/scripts/init-docs.sh ./aics-docs en
+aics-docs/scripts/init-docs.sh ./aics-docs en
 # or
-vendor/aics-docs/scripts/init-docs.sh ./aics-docs zh
+aics-docs/scripts/init-docs.sh ./aics-docs zh
 ```
 
 Quick Dialogue Start (right after clone)
@@ -57,7 +57,9 @@ CI Suggestions
 Language Navigation
 - English and Chinese pages include mutual links at the top for quick switching
 
-Prompt Recipes (copy-paste ready)
+Prompt Recipes (Reference Examples)
+> Note: The following are examples only. Before generating code, AI should analyze root files (e.g., package.json, requirements.txt, go.mod) to identify the project stack automatically.
+
 - General structure
   - Context, Functional Requirements, Boundaries/Constraints, Few-shot Examples, Acceptance Criteria, Non-Functional Requirements, Output format
 
@@ -65,40 +67,31 @@ Prompt Recipes (copy-paste ready)
 
 ```text
 Task: Implement a pure function validateUser(input).
-Context: Node.js, TypeScript, no side effects.
+Context: Follow this project's existing stack (e.g., TypeScript/Node.js); function should be side-effect free.
 Function: validate {name, email, age} → {valid, errors[]}.
 Boundaries:
 - age is integer in [13,120]
-- email matches basic RFC5322
+- email matches standard email formats
 - name trimmed length in [1,100]
-Examples:
-- {name:"  ", email:"a@b", age:12} → valid:false, errors include AGE_MIN and NAME_REQUIRED
 Acceptance:
 - Cover edge and negative cases; never silently fail
 - Pure function, no IO/global state
-Non-functional:
-- Maintainability and clear error codes/messages
-Output:
-- Provide TypeScript implementation and brief rationale; no extra files.
+Output: Provide function implementation and short rationale.
 ```
 
-- Generate REST endpoint (example)
+- Generate Backend API Endpoint (example)
 
 ```text
-Task: Implement POST /users registration endpoint.
-Context: FastAPI + Pydantic, PostgreSQL, JWT.
-Request: {email, password, name}; Response: 201 with {id, email, name}.
+Task: Implement user registration endpoint.
+Context: Analyze this project's backend framework (e.g., FastAPI/Express/Spring) and database dependencies.
+Function: Request body includes email, password, name; returns 201 with user info on success.
 Boundaries:
-- email unique
-- password ≥12 chars with upper/lower/digits
-- name non-empty
+- Email uniqueness validation
+- Password strength (min 12 chars, upper/lower/digits)
 Acceptance:
-- OpenAPI and Pydantic schemas aligned
-- Error codes: 400 validation, 409 conflict, 500 internal
-Non-functional:
-- Log failure cause without leaking sensitive info
-Output:
-- Router, models and service example; include 5 negative tests.
+- Follow project architectural patterns (Service/Controller/Repository, etc.)
+- Clear error code definitions
+Output: Routes, models, and logic implementation; provide negative test suggestions.
 ```
 
 - Generate React component (example)
@@ -148,14 +141,50 @@ Output:
 - Jest test file code.
 ```
 
-- Systematic debugging prompt (example)
+Dialogue Scripts (Post-Import)
+- One-time System Setting (Copy as "System Message")
 
 ```text
-Goal: Debug 409 conflicts on /users.
-Provide:
-- Reproduction steps with minimal inputs
-- Current logs and error codes
-Request:
+You are a senior software engineering assistant, strictly following specifications (CARE components) and project conventions:
+- Use templates in aics-docs/templates/* as the single source of truth.
+- Before generating code, deeply analyze this project's existing directory structure, coding style, dependencies, and architectural patterns.
+- Output must be executable: provide full code/tests with file paths and contents; do not generate unrelated files.
+- Security: Do not leak keys or print sensitive info; logs should expose only necessary context.
+- Quality Gates: Acceptance criteria must be testable; cover positive/negative/edge cases; ensure contract/schema and log assertions are valid.
+- Style: Maintain consistency with existing code and directory conventions; keep explanations under 5 sentences.
+```
+
+- Step A: Requirement -> Spec ("User Message")
+
+```text
+Please generate a complete specification document based on the following requirement, choosing the appropriate template (CARE components fully filled, with 5-10 testable acceptance criteria and negative scenarios):
+Requirement:
+<<< Paste business requirement >>>
+Template candidates: function-spec | rest-endpoint-spec | react-component-spec | db-migration-spec | microservice-spec | system-architecture-spec | code-refactoring-spec | code-migration-spec
+Output: Markdown specification text. State the chosen template type in the title.
+```
+
+- Step B: Spec -> Implementation ("User Message")
+
+```text
+Please provide the full implementation code (including file paths) based on the specification document generated above, by deeply analyzing this project's existing coding style, dependencies, and architectural patterns. Strictly follow the constraints and error code definitions in the spec.
+```
+
+- Step C: Spec -> Test Cases ("User Message")
+
+```text
+Please write test cases for the implementation above. Refer to the existing testing framework and style of this project, covering positive, edge, and negative scenarios, and include schema validation and error log assertions.
+```
+
+- Debugging & Updating Spec ("User Message")
+
+```text
+The following case failed. Please analyze the project context and follow the systematic debugging workflow to fix it and update the spec:
+Reproduction: <<< Minimal input and steps >>>
+Logs: <<< Error logs and stack trace >>>
+Output:
 - Steps for reproduce → isolate → hypothesis → instrumentation → tests → fix → validate
-- Negative tests and regression checklist to add
+- Fix code (file paths and contents)
+- New negative and regression tests
+- Key points for specification revision
 ```

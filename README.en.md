@@ -30,14 +30,41 @@ scripts/init-docs.sh ../your-project en
 scripts/init-docs.sh ../your-project en --force
 ```
 
+- Install into aics-docs/ directory (recommended)
+
+```bash
+# From your project root
+git clone https://github.com/Degree-21/AICS.git aics-docs
+chmod +x aics-docs/scripts/init-docs.sh
+aics-docs/scripts/init-docs.sh ./aics-docs en
+# or Chinese default
+aics-docs/scripts/init-docs.sh ./aics-docs zh
+```
+
 - Use as a submodule
 
 ```bash
 # From your target project root
-git submodule add <this-repo-url> vendor/aics-docs
+git submodule add <this-repo-url> aics-docs
 # Initialize docs into project root (keep English as default)
-vendor/aics-docs/scripts/init-docs.sh . en
+aics-docs/scripts/init-docs.sh . en
 ```
+
+## Install & Use (no jumping needed)
+- After installation, follow these steps to talk to AI:
+  - **Give Context**: Mention `#aics-docs` (or refer to the folder) in your chat to ensure AI knows the template library.
+  - **Copy System Message**:
+    - "Follow the templates in `aics-docs/`, CARE components, and **this project's existing tech stack and directory conventions**; output executable code/tests with file paths; enforce acceptance criteria and non-functional gates; keep explanations under 5 sentences."
+  - **Execution Flow**: Requirement -> Spec -> **Analyze project code to generate implementation** -> Tests -> Debug & Update Spec.
+
+## Real-world Case: One-shot Generation (Phone Registration API)
+
+**Input directly into AI dialogue:**
+> "Task: Implement a phone number input and validation API.
+> 1. First, refer to the `rest-endpoint-spec` template in `aics-docs/` to generate a spec (including phone regex and 5+ acceptance criteria).
+> 2. Then, provide the full implementation code (include file paths) based on the spec and by **deeply analyzing this project's existing coding style, dependencies, and architectural patterns**.
+> 3. Finally, write test cases covering valid, incorrect length, and illegal character scenarios.
+> Requirements: Strictly follow error code definitions, output must be executable, and keep explanations under 5 sentences."
 
 ## Template Selection
 - Function: function-spec (natural language)

@@ -24,25 +24,25 @@ Option 2: Clone and install into your project's aics-docs directory
 
 ```bash
 cd your-project
-git clone https://github.com/Degree-21/AICS.git vendor/aics-docs
-chmod +x vendor/aics-docs/scripts/init-docs.sh
+git clone https://github.com/Degree-21/AICS.git aics-docs
+chmod +x aics-docs/scripts/init-docs.sh
 # Install into aics-docs (choose English or Chinese default)
-vendor/aics-docs/scripts/init-docs.sh ./aics-docs en
-vendor/aics-docs/scripts/init-docs.sh ./aics-docs zh
+aics-docs/scripts/init-docs.sh ./aics-docs en
+aics-docs/scripts/init-docs.sh ./aics-docs zh
 ```
 
 Option 3: Add as a submodule
 
 ```bash
 cd your-project
-git submodule add https://github.com/Degree-21/AICS.git vendor/aics-docs
-chmod +x vendor/aics-docs/scripts/init-docs.sh
-vendor/aics-docs/scripts/init-docs.sh . en
+git submodule add https://github.com/Degree-21/AICS.git aics-docs
+chmod +x aics-docs/scripts/init-docs.sh
+aics-docs/scripts/init-docs.sh . en
 ```
 
 Uninstall/Cleanup
 - Remove copied docs/ subdirectories and README.* files from your project
-- If using submodule: `git submodule deinit -f vendor/aics-docs && git rm -f vendor/aics-docs`
+- If using submodule: `git submodule deinit -f aics-docs && git rm -f aics-docs`
 
 Next Steps
 - Usage guide: docs/USAGE.en.md
