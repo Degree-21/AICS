@@ -8,6 +8,7 @@
 - Templates library: [docs/templates](./docs/templates) (beginner/intermediate/advanced/testing)
 - CARE framework: [docs/care-framework.en.md](./docs/care-framework.en.md)
 - References: [docs/sources.en.md](./docs/sources.en.md)
+- Usage: [docs/USAGE.en.md](./docs/USAGE.en.md) · [docs/USAGE.zh.md](./docs/USAGE.zh.md)
 
 ## Quick Start
 - Pick a template by task complexity (beginner/intermediate/advanced/testing) under docs/templates

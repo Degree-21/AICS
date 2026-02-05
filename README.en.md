@@ -8,11 +8,32 @@ This repository focuses on spec-driven development: giving AI high-quality speci
 - Templates library: [docs/templates/en](./docs/templates/en) (beginner/intermediate/advanced/testing)
 - CARE framework: [docs/care-framework.en.md](./docs/care-framework.en.md)
 - References: [docs/sources.en.md](./docs/sources.en.md)
+- Usage: [docs/USAGE.en.md](./docs/USAGE.en.md)
 
 ## Quick Start
 - Pick a template based on task complexity (beginner/intermediate/advanced)
 - Fill the six components: Context, Functional Requirements, Edge/Constraints, Few-Shot Examples, Acceptance Criteria, Non-Functional Requirements
 - Feed the spec to AI tooling; on deviations, refine the spec first, then iterate implementation
+- To initialize docs into another project: run `scripts/init-docs.sh <target_dir> en [--force]`
+
+## Install & Integrate
+- Copy into a project
+
+```bash
+# From this repo root, initialize docs into target project
+scripts/init-docs.sh ../your-project en
+# Overwrite existing files if needed
+scripts/init-docs.sh ../your-project en --force
+```
+
+- Use as a submodule
+
+```bash
+# From your target project root
+git submodule add <this-repo-url> vendor/aics-docs
+# Initialize docs into project root (keep English as default)
+vendor/aics-docs/scripts/init-docs.sh . en
+```
 
 ## Template Selection
 - Function: function-spec (natural language)

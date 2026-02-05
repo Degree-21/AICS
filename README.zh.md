@@ -7,12 +7,33 @@
 ## 目录
 - 模板库：[docs/templates/zh](./docs/templates/zh)（入门/中级/高级/测试）
 - CARE 框架：[docs/care-framework.zh.md](./docs/care-framework.zh.md)
+- 使用指南：[docs/USAGE.zh.md](./docs/USAGE.zh.md)
 - 参考来源：[docs/sources.zh.md](./docs/sources.zh.md)
 
 ## 快速开始
 - 选择任务复杂度对应的模板（入门/中级/高级）
 - 按模板填写六要素：上下文、功能需求、边界与约束、少样本示例、验收标准、非功能需求
 - 将规格交给 AI 工具生成代码与测试；发现偏差先回写规格再迭代实现
+- 初始化到其他项目：运行 `scripts/init-docs.sh <目标目录> zh [--force]`
+
+## 安装与集成
+- 作为独立拷贝
+
+```bash
+# 在本仓库根目录执行，将文档初始化到目标项目
+scripts/init-docs.sh ../your-project zh
+# 如需覆盖目标项目已有同名文件
+scripts/init-docs.sh ../your-project zh --force
+```
+
+- 作为子模块引入
+
+```bash
+# 在目标项目根目录执行
+git submodule add <this-repo-url> vendor/aics-docs
+# 初始化文档到项目根目录（保留中文为默认）
+vendor/aics-docs/scripts/init-docs.sh . zh
+```
 
 ## 模板选择
 - 函数：function-spec（自然语言）
